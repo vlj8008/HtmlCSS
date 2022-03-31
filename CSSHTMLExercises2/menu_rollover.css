@@ -1,0 +1,87 @@
+body{
+    background: #184352
+}
+.wrap{
+    top: 0;
+    left: 0;
+    /* "auto" means however tall their browser makes it*/
+    height: auto;
+    width: 100%;
+}
+
+.menu-container{
+    /*to top edge of screen*/
+    top: 0;
+    left: 0;
+    /* means absolutely put it in the top edge of screen with no gaps*/
+    position: absolute;
+    width: 100%;
+    background-color: #184352;
+}
+
+
+.menu{
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    /* makes elements go out in a line instead of underneath each other*/
+    display: inline;
+    margin: 0;
+    padding: 0;
+    /*takes away the dots from the list*/
+    list-style: none;
+}
+
+/* Actual menu list item styling*/
+.menu li {
+    /*font color inside the box*/
+    color: #b3b3b3;
+    /*all list items to be side by side*/
+    display: inline-block;
+    margin-right: -2px;
+    /* approximate where it should be. The menu list will be relative*/
+    position: relative;
+    padding: 12px 40px;
+    border: 1px solid #9D9FA2;
+    border-radius: 1.5px;
+    background-color: #387593;
+    cursor: pointer;
+}
+/* NOTICE hover effect not working*/
+.menu li:hover{
+    background-color: #5EAFDF;
+    color: #fff;
+}
+
+.menu li:hover ul{
+    display: block;
+    opacity: 1;
+    /*while hovered, drop down menu appears. This also avoids a block-level bug*/
+    visibility:visible;
+}
+    
+.submenu {
+    padding: 0;
+    left: 0;
+    position: absolute;
+    top: 43.5px;
+    width: 125.5px;
+     /*while not being hovered drop down menu hides. this also avoids a block level bug*/
+    opacity:0;
+    visibility: hidden;
+}
+
+.submenu li{
+    background-color: #387593;
+    /* displays list items vertically instead of horizontally*/
+    display: block;
+    color: #b3b3b3;
+}
+
+.submenu li:hover{
+ color: #fff;
+ background-color: #5EAFDF;   
+}
+   
+
+
+

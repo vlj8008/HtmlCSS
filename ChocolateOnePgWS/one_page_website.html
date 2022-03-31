@@ -1,0 +1,175 @@
+<!--A modal (also called a modal window or lightbox) is a web page element that displays in front of and deactivates all other page content. 
+To return to the main content, the user must engage with the modal by completing an action or by closing it.
+Modals are often used to direct users’ attention to an important action or piece of information on a website or application.
+The purpose of modals can be summed up in one word: focus. 
+If you need visitors to focus on something simple, a modal window is one of the most effective means to do so. 
+Users must either close the modal, or complete a specific action within it (e.g., reading a message and clicking “OK”, filling out a form, etc.).-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Low Carb Treats</title>
+	<meta charset="utf-8" name="viewport" content="device-width" , initial-scale=1>
+	<link rel="stylesheet" href="CSS/one_page_website.css">
+	<script src="JS/one_page_website.js" defer></script>
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+  </style>
+  
+</head>
+
+<!--Navigation bar-->
+
+	<nav>
+		<a href="#H"> Home </a>|
+		<a href="#reg"> Registration </a>|
+		<a href="#contact">Contact Details</a>|
+	</nav>
+</section>
+<!--End Nav bar-->
+
+<body>
+
+	<!--Company logo -->
+	<div class="logo">
+	<img src="https://dcassetcdn.com/design_img/3765347/46123/22849941/11k7c89m7dhtwjkmvnrtp41q6c_image.png"
+		alt="Low Carb Chocolate Logo" height=200 width=200></img>
+	</div>
+	<!-- End company logo -->
+
+	<p id="H">Chocolate is wonderful! Did you know that it can be used to make <em>both</em> sweet and savoury dishes
+		like these?</p>
+	<br>
+	<br>
+	
+
+	<!-- four images used to open the light box -->
+
+	<h2 style="text-align:center">Click on Images Below</h2>
+    
+    <div class="row">
+      <div class="column">
+        <img src="img/cake.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="img/mole.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="img/choc_bits.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="img/choc_cookie.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+
+    <!-- Modal Box-->
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span> <!--"span" tag is used to mark up a part of text etc. It is 
+      easily manipulated by CSS or JS using the class or ID attribute. -->
+
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div> <!--Image of cake with "1/4" (indicating image number)-->
+          <img src="img/cake_wide.jpeg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="img/mole_wide.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="img/choc_bits_wide.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="img/choc_cookie_wide.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+        <!--thumb nail image controls (the photos that sit under the main photo in the light box)-->
+    
+        <div class="column">
+          <img class="demo cursor" src="img/cake_wide.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Chocolate Cake">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/mole_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Mole">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/choc_bits_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Chocolate Bits">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/choc_cookie_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Chocolate Cookies">
+        </div>
+      </div>
+    </div>
+
+	<!-- Introducing videos section -->
+
+    <p> Here is a sample of the video tutorial series that you can subscribe to. As you can see I guide you through
+        every part of the recipe:</p>
+    <br>
+	<div class="video">
+    <iframe width="500" height="500" src="https://www.youtube.com/embed/3pBqyCeGlvw" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+	</div>
+    <br>
+    <!-- End of video section-->
+
+    <!-- Registration form -->
+    <p id="reg"> Sign up for a subscription to all of our chocolate recipes. Fill out the registration form below and get one
+        week free access. No credit card required!</p>
+    <form action="" method="post">
+        <input type="text" value="First">
+        <br>
+		<br>
+        <input type="text" value="Last Name">
+        <br>
+		<br>
+        <input type="text" value="Email Address">
+        <br>
+		<br>
+        <input type="text" value="Phone Number">
+        <br>
+		<br>
+        <div class="form-spacer">
+            <a href=https://app.termly.io/builder/websites/778454/documents/1063487/Company/Contact%20Information">Terms
+                and Conditions</a>
+        </div>
+		<br>
+		<br>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+		<br>
+    </form>
+    <!--End of registration form -->
+</body>
+<!-- bookmark code-->
+<a href="#H"> Jump back to "Home"</a>
+<!-- end bookmark code-->
+
+<!-- Start of footer-->
+<footer id="contact">
+<p>lowcarbtreats.com&#169; contact@lowcarbtreats.com 818 350 9415</p>
+</footer>
+<!-- End of footer-->
+
+
+</body>
+
+</html>

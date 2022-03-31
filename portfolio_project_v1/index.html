@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+            <title>Vicky Lee Jones Portfolio</title>
+            <link rel="stylesheet" type="text/css" href="./css/port_folio.css">
+        </head>
+
+        <body class="background">
+
+            <!--Navbar-->
+
+
+            <div class="navbar">
+                <a class="active" href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#github">GitHub</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <br>
+            <br>
+
+            <!-- End Navbar-->
+
+            <!--Video container-->
+
+            <div id="home">
+                <video autoplay muted loop id="typing_video">
+                    <source src="images/typing.mp4" type="video/mp4">
+                        <!-- Display message if video doesn't load-->
+                        Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+            <!-- Video text-->
+                <div class="video_text">
+                    <h1 class="white_text">Vicky Lee Jones Portfolio</h1>
+                    <strong>
+                        <p class="center">
+                            Hello, my name is Vicky. Welcome to my portfolio website. I aim to tell you about my background and experience.
+                            <br>
+                            Please use the contact form below if you like what you see!
+                            <br>
+                        </p>
+                    </strong>
+                </div>
+            
+
+            <!--End Video container-->
+
+            <!--About container-->
+
+            <div class="row" id="about">
+                <!--left column-->
+                <div class="column_2">
+                <img src="images/comp_screen.jpg" alt="computer image">
+                </div>
+
+            <!--right column-->
+
+            <div class="column_1">
+                <h1>About</h1>
+                <p>I am a software developer with a wide range of projects under my belt. Just check out my GitHub account.
+                    <br>
+                    <br> I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, <br>where I trained and gained experience in HTML, CSS, JavaScript, Phython, SQL, C# and more'
+                </p>
+            </div>
+
+
+            </div>
+
+
+
+            <!--End About container-->
+
+            <!--Github container-->
+
+            <div class="row" id="github">
+                <!--left column-->
+                <div class="column_1">
+                    <h1>Github</h1>
+                    <p>
+                        You can view my GitHub profile here:
+                        <br>
+                        <p class="center"><a href="https://github.com/vlj8008" target ="_blank">Vicky Lee Jones GitHub</a></p>
+                    </p>
+                </div>
+
+                <!--right column-->
+
+                <div class="column_2">
+                    <a href="https://github.com/vlj8008" target="blank"><img src="./images/GitHub.png" alt="GitHub logo"></a>
+                </div>
+
+            </div>
+
+            <!--End of Github container-->
+
+            <!--Contact container-->
+
+            <div  class="row" id="contact">
+                <!-- contact image left column-->
+                <div class="column_2 column_tall">
+                    <img src="images/email.jpg" alt="email image">
+                </div>
+                <!-- contact form - right column-->
+
+                <div class="column_1 column_tall"
+                    <h1>Contact</h1>
+                    <!--this specifies where and how to send form data. To return to later-->
+                    <form action="https://formspree.io/f/xaylrqzv" method="POST">
+
+                        <label>Name:</label>
+                            <input type="text" placeholder="Please enter your name here">
+                        <label>Email</label>
+                            <input type="text" id="email" name="email" placeholder="Please enter your email here.">
+                        <label>Message</label>
+                            <input type="text" id="message" name="message" placeholder="Please write your message here.">
+                            <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <!--End of Contact container-->
+
+            <!--footer-->
+
+            <footer>
+                <p>
+                    <p class="center"><a href="https://www.vickyleejones.com/" target="_blank">Vicky Lee Jones</a></p>
+                    <br>
+                </p>
+            </footer>
+
+            <!--End of footer-->
+
+
+        </body>
+
+    </html>

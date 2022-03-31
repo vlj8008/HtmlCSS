@@ -1,0 +1,169 @@
+.logo{
+  display: block; /*displays element on a new line and takes up whole width*/
+  margin-left: auto; /*browswer calculates the margin-left*/
+  margin-right: auto;
+  width: 50%;
+}
+
+.video{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+footer{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 20;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row > .column { /*selecting both "row" and "column". The ">" symbol is called the child selector. The CSS rule
+    will be applied to the direct children of the of the particular element. ie It will target all the "column" tags which are
+    the immediate children of the "row" tag, but the children of the children will not be selected */
+    padding: 0 8px;
+  }
+  
+  .row:after { /*insert something after the "row" element*/
+    content: ""; /*sets the content to quotation marks*/
+    display: table; /*let the element behave like a table element*/
+    clear: both; /*specifies on which sides of the "row after" element the floating elements are not allowed to float. Here no floating
+    elements are allowed on both sides of the "row after" element.  */
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /** commonly used with JS to hide and show elements without deleting them and recreating them.
+    Hiding an element can be done by setting display to none. The element will be hidden, and the page will be displayed 
+    as if the element is not there. **/
+    position: fixed;
+    z-index: 1; /* higher number makes element appear at the top. */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*adds a scroll bar only when neccesary (when the content of an element is too big to fit in specified area*/
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: pink;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus { /* select and style an element when it gets focus. */
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none; /** commonly used with JS to hide and show elements without deleting them and recreating them.
+    Hiding an element can be done by setting display to none. The element will be hidden, and the page will be displayed 
+    as if the element is not there. **/
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; /*specifies whether the text of an element can be selected. This is standard syntax. Below is for Safari browser*/
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

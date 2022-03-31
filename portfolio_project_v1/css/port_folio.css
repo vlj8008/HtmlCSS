@@ -1,0 +1,267 @@
+/* General styling */
+
+
+body{
+    margin: 0%;   
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p:hover{
+    transition: transform 1s;
+    transform: scale(1.01);
+    color:turquoise
+}
+
+.center{
+    text-align: center;
+}
+
+.center:hover{
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+a{
+    color: blue;
+}
+
+img{
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:darkblue 2px solid;
+    padding:2px;
+    background-color: azure;
+}
+
+img:hover{
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px){
+    img{
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+/*Navbar styling*/
+.navbar{
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+
+}
+
+
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px; /* shorthand-top and bottom 14px, right and left 16px*/
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: relative; /* sets relative to original position*/
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+
+}
+
+.navbar a.active{
+    background-color: darkgray;
+}
+
+/* Navbar animation*/
+
+/* hover effect*/
+
+.navbar a:hover{
+    color: black;
+    background-color: darkgray;
+    font-weight: bold;
+}
+
+/* black nav bar moving left to right*/
+
+@keyframes moveNav {
+    from{left: -100vw;}
+    to{left:0vw;}
+}
+
+/* move navbar text down on to navbar from above the view*/
+
+@keyframes moveNavText{
+    from{top: -100vw;}
+    to{top: 0vw;}
+}
+
+
+/* End of Navbar styling and animation*/
+
+/* Home (video) styling */
+
+#typing_video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) { /* screens that are smaller than 576px will not display video*/
+    #typing_video {
+        display: none;
+    }
+}
+
+.white_text{ /*this is for the "Vicky Jones" portfolio title*/
+    color: #fff;
+}
+
+.video_text{
+    background: (0,0,0,0.5); /*provides semi-transparent background for text to sit on*/
+    color: white;
+    width: 100%;
+    padding: 20px; /*allows background to go slightly beyond text*/
+    position: relative;
+    -webkit-animation: move_video_text 6s;
+    animation: move_video_text 6s;
+
+}
+
+/* home (video) text animation*/
+
+@keyframes move_video_text{
+    from{top: -100vw;}  /*sets video text above viewport*/
+    to{top:0vw}
+
+}
+
+/*end home(video) styling and animation*/
+
+/*table styling*/
+
+*{
+    box-sizing: border-box;
+}
+
+.column_1{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    margin-top: 0%;
+    height: 400px;
+    background-color: #f2f2f2;
+}
+
+/* screens 576px and smaller will display a scroll bar if the text overflows column height*/
+@media screen and (max-width: 576px){
+    .column_1{
+        overflow: auto;
+    }
+}
+
+.column_2{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: lightskyblue;
+    
+}
+
+.column_tall{  /* this is applied to columns in final row, overiding the heitht and padding to provide more room for the contact form while keeping the rest of the formatting from column 1 & 2*/
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* end of table styling*/
+
+/* contact form styling*/
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text]:hover{
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+
+}
+
+input[type=submit]:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.5);
+    font-family: "Trebuchet MS", Optima;
+}
+
+/*end of contact styling*/
