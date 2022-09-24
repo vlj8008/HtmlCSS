@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <title>Low Carb Treat</title>
+  <title id="title">Low Carb Treat</title>
 
   
 </head>
@@ -37,8 +37,8 @@
         </ul>
         
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary my-2 my-sm-0 text-light" type="submit">Search</button>
+          <input id="search-fld" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <input id="submit-btn" onclick="submitMe()" value = "Submit" class="btn btn-primary my-2 my-sm-0 text-light" type="submit">
         </form>
 
       </div>
@@ -107,6 +107,9 @@
 
           <div class="col-sm">
             <h3> My Story</h3>
+            <br>
+            
+            
 
               <p>My story starts when I was a teenager.<br>
               Not understanding nutrition I made bad eating choices, and rapidly started putting on
@@ -148,7 +151,7 @@
     </div>
     <!-- End of new recipe right side column-->
 
-    <!--New Bootstarp Component: Deal section with a modal-->
+    <!--New Bootstrap Component: Deal section with a modal-->
 
     <div class="jumbotron">
       <h1 class="display-4" style="text-align: center;" >Recipe Deals</h1>
@@ -253,21 +256,11 @@
 <!--JavaScript -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!--Popper for the "sign up here" box-->
-
-    <script>
-      
-      $('.popover-dismiss').popover({
-        trigger: 'focus'
-})
-
-
-
-
-    </script>
+    
   
 </body>
 
